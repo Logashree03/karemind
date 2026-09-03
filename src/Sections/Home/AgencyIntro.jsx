@@ -4,7 +4,7 @@ import "./AgencyIntro.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import hospital from "../../assets/hospital1.jpg";
-import ban from "../../assets/ban.png";
+import ban from "../../assets/Ban.png";
 
 import {
   faHandHoldingHeart,
