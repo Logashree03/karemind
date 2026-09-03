@@ -1,0 +1,1416 @@
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.fitness-section {
+  background: linear-gradient(
+  110deg,
+  #e8eaf7 0%,
+  #dfe3f5 100%
+);
+  padding: 90px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.fitness-container {
+
+
+  min-height: 850px;
+
+  margin: 0 auto;
+  padding: 0% 85px;
+
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 30px;
+
+
+}
+
+
+/* =========================================
+   COMMON SHAPES
+========================================= */
+
+.blue-shape {
+  position: absolute;
+  background: #2176ed;
+  border-radius: 28px;
+  z-index: 1;
+
+}
+
+.pink-shape {
+  position: absolute;
+  background: #fff0ed;
+  border-radius: 30px;
+  z-index: 0;
+}
+
+
+/* =========================================
+   PHONE / IMAGE CARD
+========================================= */
+
+.phone-card {
+  position: absolute;
+
+  left: 40%;
+  top: 20px;
+
+  width: 280px;
+  height: 520px;
+
+  transform:
+    translateX(-50%)
+    rotate(0deg);
+
+  padding: 30px 20px 20px;
+
+  border: 8px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 46px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.22),
+    0 15px 35px rgba(33, 118, 237, 0.12);
+
+  overflow: hidden;
+
+  z-index: 4;
+}
+
+
+/* =========================================
+   PHONE NOTCH
+========================================= */
+
+.phone-notch {
+  position: absolute;
+
+  left: 50%;
+  top: 10px;
+
+  width: 95px;
+  height: 21px;
+
+  transform: translateX(-50%);
+
+  border-radius: 30px;
+
+  background: #1b101e;
+
+  z-index: 5;
+}
+
+
+/* =========================================
+   PHONE IMAGE
+========================================= */
+
+.phone-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+}
+
+
+/* =========================================
+   TOP LEFT VISUAL
+========================================= */
+
+.progress-visual {
+  position: relative;
+
+  height: 380px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   TOP BLUE SHAPE
+========================================= */
+
+.blue-top {
+  width: 180px;
+  height: 500px;
+
+  left: 85px;
+  top: 8px;
+
+  border-radius: 28px 28px 48px 28px;
+}
+
+
+/* =========================================
+   TOP PINK SHAPE
+========================================= */
+
+.pink-top {
+  width: 165px;
+  height: 210px;
+
+  right: 20px;
+  top: 95px;
+
+  border-radius: 0 30px 30px 0;
+}
+
+
+/* =========================================
+   TOP RIGHT CONTENT
+========================================= */
+
+.progress-content {
+  padding: 40% 10% 0 10%;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.progress-content h2,
+.routine-content h2 {
+
+  margin: 0;
+
+  color: #1a2438;
+
+  font-size: clamp(38px, 3.2vw, 50px);
+
+  line-height: 1.08;
+
+  letter-spacing: -0.045em;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.progress-content p,
+.routine-content p {
+
+  max-width: 480px;
+
+  margin: 25px 0 20px;
+
+  color: #8b949f;
+
+  font-size: 16px;
+
+  line-height: 1.75;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   BULLET LIST
+========================================= */
+
+.progress-content ul {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.progress-content li {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 11px;
+
+  color: #59616c;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+
+.bullet {
+
+  width: 9px;
+  height: 9px;
+
+  min-width: 9px;
+
+  border-radius: 50%;
+
+  background: #2380ef;
+
+  box-shadow: 0 0 0 5px rgba(35, 128, 239, 0.08);
+}
+
+
+/* =========================================
+   BOTTOM LEFT CONTENT
+========================================= */
+
+.routine-content {
+
+  padding: 60px 55px 0 0;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+
+/* =========================================
+   LEARN MORE
+========================================= */
+
+.learn-more {
+
+  color: #2279e9;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  margin-top: 5px;
+
+  transition: 0.3s ease;
+}
+
+.learn-more:hover {
+
+  transform: translateX(6px);
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   BOTTOM RIGHT VISUAL
+========================================= */
+
+.notification-visual {
+
+  position: relative;
+
+  height: 584px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   BOTTOM PINK
+========================================= */
+
+/* .pink-bottom {
+
+  width: 165px;
+  height: 205px;
+
+  left: 0;
+  top: 45px;
+
+  border-radius: 30px 0 0 30px;
+
+  background: #fff0ed;
+} */
+
+
+/* =========================================
+   BOTTOM BLUE
+========================================= */
+
+.blue-bottom {
+
+  width: 205px;
+  height: 505px;
+
+  right: 33%;
+  top: 8px;
+
+  border-radius: 30px;
+}
+
+
+/* =========================================
+   BOTTOM IMAGE
+========================================= */
+
+.notification-phone {
+
+  width: 210px;
+  height: 320px;
+
+  position: relative;
+
+  z-index: 4;
+
+  margin-left: 15px;
+
+  filter:
+    drop-shadow(0 20px 30px rgba(0, 0, 0, 0.18));
+}
+
+
+.notification-phone img {
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+}
+
+
+/* =========================================
+   HOVER EFFECTS
+========================================= */
+
+.phone-card,
+.notification-phone {
+
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.phone-card:hover {
+
+  transform:
+    translateX(-50%)
+    rotate(1deg)
+    translateY(-8px);
+
+  filter:
+    drop-shadow(0 25px 35px rgba(33, 118, 237, 0.20));
+}
+
+
+.notification-phone:hover {
+
+  transform:
+    translateY(-10px)
+    scale(1.03);
+
+  filter:
+    drop-shadow(0 25px 35px rgba(33, 118, 237, 0.20));
+}
+
+
+/* =========================================
+   SHAPE HOVER
+========================================= */
+
+.blue-shape,
+.pink-shape {
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.progress-visual:hover .blue-top {
+
+  transform:
+    translate(-8px, -8px)
+    rotate(-3deg);
+}
+
+.progress-visual:hover .pink-top {
+
+  transform:
+    translate(8px, 8px)
+    rotate(3deg);
+}
+
+.notification-visual:hover .blue-bottom {
+
+  transform:
+    translate(8px, -8px)
+    rotate(3deg);
+}
+
+.notification-visual:hover .pink-bottom {
+
+  transform:
+    translate(-8px, 8px)
+    rotate(-3deg);
+}
+
+/* =========================================
+   RESPONSIVE — LARGE TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .fitness-section {
+    padding: 75px 30px;
+  }
+
+  .fitness-container {
+    width: 100%;
+    max-width: 1100px;
+
+    min-height: 820px;
+
+    padding: 0 55px;
+  }
+
+  /* TOP BLUE */
+
+  .blue-top {
+    left: 55px;
+    width: 165px;
+    height: 480px;
+  }
+
+  /* TOP PINK */
+
+  .pink-top {
+    right: 5px;
+    width: 145px;
+  }
+
+  /* PHONE */
+
+  .phone-card {
+    left: 39%;
+
+    width: 265px;
+    height: 500px;
+  }
+
+  /* CONTENT */
+
+  .progress-content {
+    padding: 40% 5% 0 7%;
+  }
+
+  .progress-content h2,
+  .routine-content h2 {
+    font-size: 44px;
+  }
+
+  /* BOTTOM BLUE */
+
+  .blue-bottom {
+    right: 27%;
+    width: 190px;
+    height: 480px;
+  }
+
+  .notification-phone {
+    width: 200px;
+    height: 305px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+   768px — 1000px
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .fitness-section {
+    padding: 65px 25px;
+  }
+
+  .fitness-container {
+
+    width: 100%;
+
+    min-height: 760px;
+
+    padding: 40px 35px;
+
+    border-radius: 28px;
+  }
+
+
+  /* =========================================
+     TOP VISUAL
+  ========================================= */
+
+  .progress-visual {
+    height: 350px;
+  }
+
+  .blue-top {
+
+    left: 35px;
+
+    width: 145px;
+    height: 430px;
+
+    top: 5px;
+  }
+
+  .pink-top {
+
+    right: 0;
+
+    width: 130px;
+    height: 185px;
+
+    top: 90px;
+  }
+
+
+  /* =========================================
+     PHONE
+  ========================================= */
+
+  .phone-card {
+
+    left: 40%;
+
+    width: 240px;
+    height: 455px;
+
+    padding: 25px 16px 16px;
+
+    border-width: 7px;
+
+    border-radius: 40px;
+  }
+
+  .phone-image {
+    border-radius: 27px;
+  }
+
+  .phone-notch {
+    width: 80px;
+    height: 18px;
+  }
+
+
+  /* =========================================
+     CONTENT
+  ========================================= */
+
+  .progress-content {
+
+    padding: 35% 4% 0 5%;
+  }
+
+  .progress-content h2,
+  .routine-content h2 {
+
+    font-size: 38px;
+
+    line-height: 1.1;
+  }
+
+  .progress-content p,
+  .routine-content p {
+
+    max-width: 400px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .progress-content li {
+
+    font-size: 14px;
+
+    gap: 10px;
+
+    margin-bottom: 9px;
+  }
+
+
+  /* =========================================
+     BOTTOM
+  ========================================= */
+
+  .routine-content {
+
+    padding: 45px 35px 0 0;
+  }
+
+  .notification-visual {
+
+    height: 350px;
+  }
+
+  .blue-bottom {
+
+    right: 25%;
+
+    width: 165px;
+    height: 430px;
+  }
+
+  .notification-phone {
+
+    width: 185px;
+    height: 285px;
+
+    margin-left: 10px;
+  }
+}
+
+
+/* =========================================
+   SMALL TABLET
+   651px — 767px
+========================================= */
+
+@media (max-width: 767px) {
+
+  .fitness-section {
+
+    padding: 50px 18px;
+  }
+
+  .fitness-container {
+
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 35px 30px 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+  }
+
+
+  /* =========================================
+     TOP IMAGE
+  ========================================= */
+
+  .progress-visual {
+
+    width: 100%;
+
+    height: 350px;
+
+    order: 1;
+  }
+
+
+  .blue-top {
+
+    left: 15%;
+
+    width: 130px;
+    height: 190px;
+
+    top: 65px;
+
+    border-radius: 24px 24px 38px 24px;
+  }
+
+
+  .pink-top {
+
+    right: 12%;
+
+    width: 120px;
+    height: 150px;
+
+    top: 100px;
+  }
+
+
+  /* =========================================
+     PHONE
+  ========================================= */
+
+  .phone-card {
+
+    left: 50%;
+
+    top: 15px;
+
+    width: 215px;
+    height: 340px;
+
+    padding: 25px 13px 13px;
+
+    border-width: 6px;
+
+    border-radius: 35px;
+  }
+
+  .phone-image {
+
+    border-radius: 24px;
+  }
+
+  .phone-notch {
+
+    top: 8px;
+
+    width: 70px;
+    height: 16px;
+  }
+
+
+  /* =========================================
+     TOP CONTENT
+  ========================================= */
+
+  .progress-content {
+
+    width: 100%;
+
+    padding: 25px 5px 15px;
+
+    order: 2;
+  }
+
+  .section-label {
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+  }
+
+  .progress-content h2,
+  .routine-content h2 {
+
+    font-size: 32px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.03em;
+  }
+
+  .progress-content p,
+  .routine-content p {
+
+    max-width: 100%;
+
+    margin: 18px 0 18px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .progress-content li {
+
+    font-size: 12px;
+
+    gap: 10px;
+
+    margin-bottom: 9px;
+  }
+
+  .bullet {
+
+    width: 7px;
+    height: 7px;
+
+    min-width: 7px;
+  }
+
+
+  /* =========================================
+     BOTTOM CONTENT
+  ========================================= */
+
+  .routine-content {
+
+    width: 100%;
+
+    padding: 35px 5px 10px;
+
+    order: 3;
+  }
+
+
+  /* =========================================
+     BOTTOM IMAGE
+  ========================================= */
+
+  .notification-visual {
+
+    width: 100%;
+
+    height: 340px;
+
+    order: 4;
+  }
+
+  .blue-bottom {
+
+    right: 13%;
+
+    width: 125px;
+    height: 190px;
+
+    top: 65px;
+
+    border-radius: 24px;
+  }
+
+  .notification-phone {
+
+    width: 175px;
+    height: 270px;
+
+    margin-left: 0;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   481px — 650px
+========================================= */
+
+@media (max-width: 650px) {
+
+  .fitness-section {
+
+    padding: 35px 12px;
+  }
+
+  .fitness-container {
+
+    padding: 30px 22px 45px;
+
+    border-radius: 22px;
+  }
+
+
+  /* TOP VISUAL */
+
+  .progress-visual {
+
+    height: 325px;
+  }
+
+  .blue-top {
+
+    left: 13%;
+
+    width: 115px;
+    height: 180px;
+
+    top: 55px;
+  }
+
+  .pink-top {
+
+    right: 10%;
+
+    width: 105px;
+    height: 145px;
+
+    top: 85px;
+  }
+
+
+  /* PHONE */
+
+  .phone-card {
+
+    width: 205px;
+    height: 325px;
+
+    top: 12px;
+
+    padding: 23px 12px 12px;
+
+    border-radius: 32px;
+  }
+
+  .phone-image {
+
+    border-radius: 22px;
+  }
+
+  .phone-notch {
+
+    width: 65px;
+
+    height: 15px;
+
+    top: 7px;
+  }
+
+
+  /* CONTENT */
+
+  .progress-content {
+
+    padding: 25px 5px;
+  }
+
+  .section-label {
+
+    font-size: 10px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .progress-content h2,
+  .routine-content h2 {
+
+    font-size: 29px;
+
+    line-height: 1.1;
+  }
+
+  .progress-content p,
+  .routine-content p {
+
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  .progress-content li {
+
+    font-size: 11px;
+
+    margin-bottom: 8px;
+  }
+
+
+  /* BOTTOM */
+
+  .routine-content {
+
+    padding: 30px 5px 15px;
+  }
+
+  .notification-visual {
+
+    height: 310px;
+  }
+
+  .blue-bottom {
+
+    right: 10%;
+
+    width: 110px;
+
+    height: 175px;
+
+    top: 55px;
+  }
+
+  .notification-phone {
+
+    width: 165px;
+
+    height: 255px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   376px — 480px
+========================================= */
+
+@media (max-width: 480px) {
+
+  .fitness-section {
+
+    padding: 25px 10px;
+  }
+
+  .fitness-container {
+
+    padding: 25px 18px 40px;
+
+    border-radius: 20px;
+  }
+
+
+  /* TOP IMAGE */
+
+  .progress-visual {
+
+    height: 290px;
+  }
+
+  .blue-top {
+
+    left: 9%;
+
+    width: 100px;
+
+    height: 155px;
+
+    top: 55px;
+  }
+
+  .pink-top {
+
+    right: 7%;
+
+    width: 92px;
+
+    height: 125px;
+
+    top: 78px;
+  }
+
+
+  /* PHONE */
+
+  .phone-card {
+
+    width: 185px;
+
+    height: 295px;
+
+    top: 10px;
+
+    padding: 21px 10px 10px;
+
+    border-width: 5px;
+
+    border-radius: 29px;
+  }
+
+  .phone-image {
+
+    border-radius: 20px;
+  }
+
+  .phone-notch {
+
+    width: 58px;
+
+    height: 13px;
+
+    top: 6px;
+  }
+
+
+  /* CONTENT */
+
+  .progress-content {
+
+    padding: 22px 3px;
+  }
+
+  .section-label {
+
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 10px;
+  }
+
+  .progress-content h2,
+  .routine-content h2 {
+
+    font-size: 26px;
+
+    line-height: 1.12;
+  }
+
+  .progress-content p,
+  .routine-content p {
+
+    font-size: 11px;
+
+    line-height: 1.65;
+
+    margin: 15px 0;
+  }
+
+  .progress-content li {
+
+    font-size: 10px;
+
+    gap: 8px;
+
+    margin-bottom: 7px;
+  }
+
+  .bullet {
+
+    width: 6px;
+
+    height: 6px;
+
+    min-width: 6px;
+
+    box-shadow:
+      0 0 0 4px rgba(35, 128, 239, 0.08);
+  }
+
+
+  /* BOTTOM CONTENT */
+
+  .routine-content {
+
+    padding: 25px 3px 10px;
+  }
+
+
+  /* BOTTOM VISUAL */
+
+  .notification-visual {
+
+    height: 285px;
+  }
+
+  .blue-bottom {
+
+    right: 7%;
+
+    width: 95px;
+
+    height: 150px;
+
+    top: 50px;
+  }
+
+  .notification-phone {
+
+    width: 145px;
+
+    height: 225px;
+  }
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+   320px — 375px
+========================================= */
+
+@media (max-width: 375px) {
+
+  .fitness-section {
+
+    padding: 20px 8px;
+  }
+
+  .fitness-container {
+
+    padding: 22px 15px 35px;
+
+    border-radius: 18px;
+  }
+
+
+  /* TOP VISUAL */
+
+  .progress-visual {
+
+    height: 265px;
+  }
+
+  .blue-top {
+
+    left: 7%;
+
+    width: 85px;
+
+    height: 135px;
+
+    top: 52px;
+  }
+
+  .pink-top {
+
+    right: 5%;
+
+    width: 80px;
+
+    height: 110px;
+
+    top: 72px;
+  }
+
+
+  /* PHONE */
+
+  .phone-card {
+
+    width: 165px;
+
+    height: 265px;
+
+    top: 8px;
+
+    padding: 19px 9px 9px;
+
+    border-width: 5px;
+
+    border-radius: 26px;
+  }
+
+  .phone-image {
+
+    border-radius: 18px;
+  }
+
+  .phone-notch {
+
+    width: 52px;
+
+    height: 12px;
+
+    top: 6px;
+  }
+
+
+  /* CONTENT */
+
+  .progress-content {
+
+    padding: 20px 2px;
+  }
+
+  .section-label {
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+  }
+
+  .progress-content h2,
+  .routine-content h2 {
+
+    font-size: 23px;
+  }
+
+  .progress-content p,
+  .routine-content p {
+
+    font-size: 10px;
+
+    line-height: 1.6;
+  }
+
+  .progress-content li {
+
+    font-size: 9px;
+
+    gap: 7px;
+
+    margin-bottom: 6px;
+  }
+
+
+  /* BOTTOM */
+
+  .routine-content {
+
+    padding: 22px 2px 8px;
+  }
+
+  .notification-visual {
+
+    height: 255px;
+  }
+
+  .blue-bottom {
+
+    right: 5%;
+
+    width: 82px;
+
+    height: 130px;
+
+    top: 45px;
+  }
+
+  .notification-phone {
+
+    width: 130px;
+
+    height: 200px;
+  }
+}
+
+
+/* =========================================
+   LANDSCAPE MOBILE
+========================================= */
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+  .fitness-container {
+
+    padding-top: 30px;
+  }
+
+  .progress-visual {
+
+    height: 300px;
+  }
+
+  .phone-card {
+
+    width: 180px;
+
+    height: 290px;
+  }
+
+  .notification-visual {
+
+    height: 290px;
+  }
+}

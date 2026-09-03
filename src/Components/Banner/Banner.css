@@ -1,0 +1,700 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+
+/* =========================================================
+   ABOUT HERO
+========================================================= */
+
+
+.about-hero {
+  position: relative;
+
+  width: 100%;
+  height: 680px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 75% 40%,
+      rgba(119, 63, 137, 0.35),
+      transparent 32%),
+    linear-gradient(135deg,
+      #15071c 0%,
+      #28102f 48%,
+      #351044 100%);
+
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.about-hero-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(20px);
+}
+
+.glow-left {
+  width: 400px;
+  height: 400px;
+
+  left: -220px;
+  top: 100px;
+
+  background:
+    rgba(219, 91, 255, 0.08);
+}
+
+.glow-right {
+  width: 600px;
+  height: 600px;
+
+  right: -180px;
+  top: -100px;
+
+  background: rgb(208 72 255 / 13%);
+}
+
+.navbar-wrapper {
+        position: fixed;
+        left: 0;
+        right: 0;
+        -webkit-backdrop-filter: saturate(180%) blur(40px);
+        backdrop-filter: saturate(180%) blur(40px);
+        top: calc(var(--vamtam-sticky-offset, 0px) + var(--wp-admin--admin-bar--height, 0px));
+        z-index: 100;
+        width: 100%;
+        height: 95px; /* navbar + top space */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.about-hero-content {
+  position: absolute;
+
+  left: 8%;
+
+  top: 145px;
+
+  width: 49%;
+
+  z-index: 10;
+
+
+}
+
+.about-hero-content h1 {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal;
+}
+
+.about-hero-content span {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  font-style: normal;
+  letter-spacing: -1px !important;
+}
+
+/* eyebrow */
+
+.about-eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #315fb5;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.about-eyebrow span {
+  width: 32px;
+  height: 2px;
+  letter-spacing: 4px;
+  border-radius: 20px;
+
+  background: #315fb5;
+}
+
+
+/* heading */
+
+.about-hero-content h1 {
+  margin: 24px 0 0;
+
+  color: #f9fcff;
+
+  font-size: clamp(52px,
+      5.2vw,
+      78px);
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  font-weight: 300;
+}
+
+.about-hero-content h1 span {
+  color: #315fb5;
+
+  font-weight: 800;
+}
+
+
+/* paragraph */
+
+.about-hero-content p {
+  max-width: 510px;
+
+  margin: 25px 0 0;
+
+  color: #748092;
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.about-hero-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 30px;
+
+  padding:
+    0 17px 0 23px;
+
+  height: 52px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #315fb5;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 35px rgba(49, 95, 181, 0.25);
+
+  transition:
+    0.25s ease;
+}
+
+.about-hero-btn span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 9px;
+
+  background: white;
+
+  color: #315fb5;
+
+  font-size: 16px;
+}
+
+.about-hero-btn:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 20px 45px rgba(49, 95, 181, 0.32);
+}
+
+
+/* =========================================================
+   PHONE AREA
+========================================================= */
+
+.about-phone-area {
+  position: absolute;
+
+  right: 8%;
+
+  top: 55px;
+
+  width: 500px;
+  height: 570px;
+
+  z-index: 7;
+}
+
+
+/* =========================================================
+   PHONE GLOW
+========================================================= */
+
+.phone-glow {
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  left: 55px;
+  top: 80px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(168, 54, 210, 0.15);
+
+  filter: blur(45px);
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+========================================================= */
+
+.phone-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(222, 202, 231, 0.13);
+}
+
+.circle-a {
+  width: 390px;
+  height: 390px;
+
+  left: 50px;
+  top: 80px;
+}
+
+.circle-b {
+  width: 470px;
+  height: 470px;
+
+  left: 10px;
+  top: 40px;
+}
+
+
+/* =========================================================
+   3D PHONE
+========================================================= */
+
+.phone-3d {
+  position: absolute;
+
+  left: 115px;
+  top: 18px;
+
+  width: 270px;
+  height: 535px;
+
+  transform:
+    perspective(1200px) rotateY(-14deg) rotateX(4deg) rotateZ(3deg);
+
+  border-radius: 38px;
+
+  background:
+    linear-gradient(145deg,
+      #15181d,
+      #3a3e44);
+
+  padding: 8px;
+
+  box-shadow:
+    35px 45px 60px rgba(31, 61, 96, 0.27),
+
+    10px 10px 0 rgba(0, 0, 0, 0.12),
+
+    0 0 0 2px rgba(255, 255, 255, 0.2);
+
+  z-index: 10;
+}
+
+
+/* =========================================================
+   PHONE SIDE
+========================================================= */
+
+.phone-side {
+  position: absolute;
+
+  right: -8px;
+
+  top: 65px;
+
+  width: 8px;
+  height: 390px;
+
+  border-radius: 0 8px 8px 0;
+
+  background:
+    linear-gradient(180deg,
+      #5c6168,
+      #24272b);
+}
+
+
+/* =========================================================
+   SCREEN
+========================================================= */
+
+.phone-screen {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 31px;
+
+  background:
+    linear-gradient(180deg,
+      #f9fcff,
+      #eaf4ff);
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.phone-floating-card {
+  position: absolute;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 15px;
+
+  border-radius: 15px;
+
+  background:
+    rgba(255, 255, 255, 0.88);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 20px 45px rgba(80, 38, 112, 0.17);
+
+  backdrop-filter:
+    blur(15px);
+
+  z-index: 20;
+}
+
+.notification-card {
+  right: -30px;
+
+  top: 170px;
+
+  animation:
+    phoneFloatOne 4s ease-in-out infinite;
+}
+
+.floating-check {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 10px;
+
+  background:
+    #e7f4eb;
+
+  color: #25a05a;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.phone-floating-card strong {
+  display: block;
+
+  color: #18212b;
+
+  font-size: 9px;
+}
+
+.phone-floating-card span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #8a96a3;
+
+  font-size: 7px;
+}
+
+.stat-card {
+  left: -20px;
+
+  bottom: 100px;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 1px;
+
+  padding:
+    14px 20px;
+
+  animation:
+    phoneFloatTwo 4.5s ease-in-out infinite;
+}
+
+.stat-card strong {
+  color: #315fb5;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes phoneFloatOne {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-10px);
+  }
+}
+
+@keyframes phoneFloatTwo {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(10px);
+  }
+}
+
+
+/* =========================================================
+   BOTTOM WAVE
+========================================================= */
+
+.about-hero-wave {
+  position: absolute;
+
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: 75px;
+
+  z-index: 30;
+
+  pointer-events: none;
+}
+
+.about-hero-wave svg {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+.about-hero-wave path {
+  fill: #e4e7f6 ;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .about-hero-content {
+    left: 5%;
+
+    width: 48%;
+  }
+
+  .about-hero-content h1 {
+    font-size: 54px;
+  }
+
+  .about-phone-area {
+    right: -5%;
+
+    transform:
+      scale(0.85);
+
+    transform-origin:
+      top center;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .about-hero {
+    height: 800px;
+  }
+
+  .about-hero-content {
+    position: absolute;
+
+    top: 55px;
+
+    left: 20px;
+    right: 20px;
+
+    width: auto;
+
+    text-align: center;
+  }
+
+  .about-eyebrow {
+    justify-content: center;
+
+    font-size: 9px;
+  }
+
+  .about-hero-content h1 {
+    margin-top: 17px;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+  }
+
+  .about-hero-content p {
+    margin:
+      17px auto 0;
+
+    max-width: 380px;
+
+    font-size: 11px;
+  }
+
+  .about-hero-btn {
+    margin:
+      20px auto 0;
+
+    height: 45px;
+
+    font-size: 11px;
+  }
+
+
+  /* PHONE */
+
+  .about-phone-area {
+    top: 305px;
+
+    left: 50%;
+    right: auto;
+
+    width: 500px;
+
+    transform:
+      translateX(-50%) scale(0.67);
+
+    transform-origin:
+      top center;
+  }
+
+
+  .notification-card {
+    right: -15px;
+  }
+
+  .stat-card {
+    left: -5px;
+  }
+
+  .about-hero-wave {
+    height: 45px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .about-hero {
+    height: 770px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .about-phone-area {
+    top: 295px;
+
+    transform:
+      translateX(-50%) scale(0.60);
+  }
+}

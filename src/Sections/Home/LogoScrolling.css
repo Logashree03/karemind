@@ -1,0 +1,399 @@
+/* =====================================================
+   CLIENT SECTION
+===================================================== */
+
+.clients-section {
+    width: 100%;
+    padding: 90px 0;
+    background: linear-gradient(
+    110deg,
+  #e8eaf7 0%,
+  #dfe3f5 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+.clients-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.clients-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+
+
+.clients-heading h2 {
+    margin: 0;
+
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.15;
+
+    font-weight: 700;
+    letter-spacing: -1.5px;
+
+    color: #1d1d1f;
+}
+
+
+
+.clients-heading p {
+    margin: 18px auto 0;
+
+    max-width: 600px;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   HEADING LINE
+===================================================== */
+
+.heading-line {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 25px;
+}
+
+.heading-line span {
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: #331040;
+}
+
+
+/* =====================================================
+   CLIENT SLIDER
+===================================================== */
+
+.client-slider {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 18px 0 25px;
+
+    border-radius: 30px;
+}
+
+
+/* =====================================================
+   SLIDER TRACK
+===================================================== */
+
+.client-slider-track {
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+
+    gap: 28px;
+
+    padding: 12px 20px;
+
+    animation: client-scroll 30s linear infinite;
+
+    will-change: transform;
+}
+
+
+/* =====================================================
+   CLIENT CARD
+===================================================== */
+
+.client-slide {
+    flex: 0 0 auto;
+
+    width: 210px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(51, 16, 64, 0.08);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.045);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.client-slide:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(51, 16, 64, 0.18);
+
+    box-shadow:
+        0 18px 45px rgba(51, 16, 64, 0.10);
+}
+
+
+/* =====================================================
+   LOGO WRAPPER
+===================================================== */
+
+.client-logo-wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: linear-gradient(145deg,
+            #ffffff,
+            #faf9fb);
+
+    transition: background 0.4s ease;
+}
+
+.client-slide:hover .client-logo-wrapper {
+    background: #fff;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.client-logo {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 145px;
+    max-height: 65px;
+
+    object-fit: contain;
+
+    filter: grayscale(100%);
+    opacity: 0.68;
+
+    transition:
+        filter 0.4s ease,
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* Logo becomes colorful */
+.client-slide:hover .client-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+
+    transform: scale(1.07);
+}
+
+
+/* =====================================================
+   FADE EFFECTS
+===================================================== */
+
+.slider-fade {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 160px;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+.slider-fade-left {
+    left: 0;
+    background: linear-gradient(to right, #e6e8f6 5%, rgb(230 233 247) 35%, rgba(255, 255, 255, 0) 100%);
+}
+
+.slider-fade-right {
+    right: 0;
+    background: linear-gradient(to left, #e0e4f5 5%, rgb(224 228 245) 35%, rgba(255, 255, 255, 0) 100%);
+
+
+}
+
+
+/* =====================================================
+   INFINITE ANIMATION
+===================================================== */
+
+@keyframes client-scroll {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+}
+
+
+/* =====================================================
+   PAUSE ON HOVER
+===================================================== */
+
+.client-slider:hover .client-slider-track {
+    animation-play-state: paused;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .clients-section {
+        padding: 75px 0;
+    }
+
+    .client-slide {
+        width: 190px;
+        height: 110px;
+    }
+
+    .client-slider-track {
+        gap: 22px;
+    }
+
+    .slider-fade {
+        width: 110px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .clients-section {
+        padding: 65px 0;
+    }
+
+    .clients-heading {
+        margin-bottom: 38px;
+        padding: 0 20px;
+    }
+
+    .clients-heading h2 {
+        font-size: 2.2rem;
+    }
+
+    .clients-heading p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+    .client-slider {
+        border-radius: 20px;
+    }
+
+    .client-slider-track {
+        gap: 18px;
+        padding: 10px 15px;
+
+        animation-duration: 24s;
+    }
+
+    .client-slide {
+        width: 165px;
+        height: 95px;
+
+        border-radius: 17px;
+    }
+
+    .client-logo {
+        max-width: 115px;
+        max-height: 52px;
+    }
+
+    .slider-fade {
+        width: 65px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .clients-section {
+        padding: 50px 0;
+    }
+
+    .clients-heading h2 {
+        font-size: 1.9rem;
+    }
+
+    .clients-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+
+    .client-slide {
+        width: 145px;
+        height: 85px;
+    }
+
+    .client-logo {
+        max-width: 100px;
+        max-height: 45px;
+    }
+
+    .slider-fade {
+        width: 45px;
+    }
+
+}

@@ -1,0 +1,589 @@
+/* =========================================
+   MAIN WHITE CONTAINER
+========================================= */
+
+.team-info-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 790px;
+    margin: 0 auto;
+    padding: 70px 30px 105px;
+    box-sizing: border-box;
+}
+
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.TeamInfo-heading {
+    width: 100%;
+    text-align: center;
+}
+
+.TeamInfo-heading h1 {
+    margin: 0;
+
+    color: #f4f0f0;
+
+    font-size: 40px;
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -1.3px;
+}
+
+
+.TeamInfo-heading span 
+{
+    text-align: center;
+    
+
+}
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.team-info-gallery {
+    position: relative;
+
+    width: 100%;
+    height: 400px;
+
+    margin-top: 70px;
+}
+
+
+/* =========================================
+   COMMON IMAGE
+========================================= */
+
+.team-image-wrapper {
+    position: absolute;
+
+    width: 110px;
+    height: 158px;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+
+    background: #e7e8e6;
+
+    cursor: pointer;
+
+    z-index: 1;
+
+    transition:
+        left 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        top 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        width 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        height 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.25s ease,
+        box-shadow 0.35s ease;
+
+    will-change: left, top, width, height, transform;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.team-image-wrapper img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+
+/* =========================================
+   INITIAL POSITION
+========================================= */
+
+/* PERSON 1 */
+
+.team-image-1 {
+    left: calc(40% - 125px);
+    top: 113px;
+    width: 250px;
+    height: 250px;
+}
+
+
+/* PERSON 2 */
+
+.team-image-2 {
+    left: calc(40% + 200px);
+    top: 113px;
+    width: 250px;
+    height: 250px;
+}
+
+
+/* =========================================
+   ACTIVE IMAGE
+========================================= */
+
+.team-image-wrapper.is-active {
+    left: 413px !important;
+    top: 0 !important;
+
+    width: 285px !important;
+    height: 370px !important;
+
+    transform: none !important;
+
+    border-radius: 13px;
+
+    z-index: 5;
+
+    cursor: default;
+
+    opacity: 1;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   OTHER IMAGE
+   IMPORTANT
+========================================= */
+
+.team-image-wrapper.is-other {
+    left: 730px !important;
+    top: 213px !important;
+
+    width: 110px !important;
+    height: 158px !important;
+
+    transform: none !important;
+
+    opacity: 1;
+
+    z-index: 6;
+}
+
+
+/* =========================================
+   ACTIVE IMAGE HOVER
+========================================= */
+
+.team-image-wrapper.is-active img {
+    transform: scale(1);
+}
+
+
+
+    .team-image-wrapper:hover {
+        left: 413px !important;
+        top: 0 !important;
+
+        width: 285px !important;
+        height: 370px !important;
+
+        transform: none !important;
+
+        border-radius: 13px;
+
+        z-index: 5;
+
+        opacity: 1;
+
+        box-shadow:
+            0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .team-image-wrapper:hover img {
+        transform: scale(1);
+    }
+
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.team-info-details {
+    position: absolute;
+
+    left: 735px;
+    top: 27px;
+
+    width: 270px;
+    min-height: 170px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(20px);
+
+    z-index: 4;
+
+    transition:
+        opacity 0.35s ease 0.35s,
+        transform 0.35s ease 0.35s,
+        visibility 0s linear 0.7s;
+}
+
+
+/* =========================================
+   SHOW INFORMATION
+========================================= */
+
+.team-info-details.show-info {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(0);
+
+    transition:
+        opacity 0.35s ease 0.42s,
+        transform 0.35s ease 0.42s;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.team-rating {
+    color: #efbe19;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.team-description {
+    margin: 14px 0 0;
+
+    color: #d6d0d9;
+
+    font-size: 13px;
+
+    line-height: 1.35;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   RED LINE
+========================================= */
+
+.team-red-line {
+    width: 62px;
+    height: 2px;
+
+    margin-top: 17px;
+
+    background: #b85d47;
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.team-info-details h2 {
+    margin: 19px 0 0;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ROLE
+========================================= */
+
+.team-info-details span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   BOTTOM ICON
+========================================= */
+
+.team-bottom-icon {
+    position: absolute;
+
+    right: 23px;
+    bottom: 18px;
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.035);
+}
+
+.team-bottom-icon span {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid #050505;
+
+    border-radius: 50%;
+}
+
+.team-bottom-icon b {
+    position: relative;
+
+    left: 6px;
+    top: -5px;
+
+    color: #050505;
+
+    font-size: 19px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .team-info-container {
+        min-height: 700px;
+
+        padding: 55px 24px 85px;
+    }
+
+    .team-info-heading h1 {
+        font-size: 34px;
+    }
+
+    .team-info-gallery {
+        transform: scale(0.9);
+
+        transform-origin: top center;
+
+        width: 111.11%;
+
+        margin-left: -5.55%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .team-info-container {
+        min-height: 850px;
+
+        padding: 48px 18px 80px;
+
+        border-radius: 25px;
+    }
+
+
+    .team-info-heading h1 {
+        font-size: 29px;
+    }
+
+
+    .team-info-gallery {
+        height: 620px;
+
+        width: 100%;
+
+        margin: 35px 0 0;
+
+        transform: none;
+    }
+
+
+    /* ==============================
+     NORMAL IMAGES
+  ============================== */
+
+    .team-image-wrapper {
+        width: 82px;
+
+        height: 120px;
+
+        border-radius: 10px;
+    }
+
+
+    .team-image-1 {
+        left: calc(50% - 92px);
+
+        top: 470px;
+    }
+
+
+    .team-image-2 {
+        left: calc(50% + 10px);
+
+        top: 470px;
+    }
+
+
+    /* ==============================
+     ACTIVE IMAGE
+  ============================== */
+
+    .team-image-wrapper.is-active {
+        left: 50% !important;
+
+        top: 0 !important;
+
+        width: 220px !important;
+
+        height: 285px !important;
+
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* ==============================
+     OTHER IMAGE
+  ============================== */
+
+    .team-image-wrapper.is-other {
+        left: calc(50% + 100px) !important;
+
+        top: 470px !important;
+
+        width: 82px !important;
+
+        height: 120px !important;
+
+        transform: none !important;
+    }
+
+
+    /* ==============================
+     INFORMATION
+  ============================== */
+
+    .team-info-details {
+        left: 50%;
+
+        top: 305px;
+
+        width: 220px;
+
+        transform:
+            translateX(-50%) translateY(20px);
+    }
+
+
+    .team-info-details.show-info {
+        transform:
+            translateX(-50%) translateY(0);
+    }
+
+
+    .team-description {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .team-info-heading h1 {
+        font-size: 26px;
+    }
+
+
+    .team-image-wrapper {
+        width: 75px;
+        height: 110px;
+    }
+
+
+    .team-image-1 {
+        left: calc(50% - 82px);
+    }
+
+
+    .team-image-2 {
+        left: calc(50% + 7px);
+    }
+
+
+    .team-image-wrapper.is-active {
+        width: 195px !important;
+        height: 255px !important;
+    }
+
+
+    .team-image-wrapper.is-other {
+        width: 75px !important;
+        height: 110px !important;
+
+        left: calc(50% + 85px) !important;
+    }
+
+
+    .team-info-details {
+        top: 275px;
+
+        width: 195px;
+    }
+}

@@ -1,0 +1,26 @@
+.Stats-section {
+  padding: 1rem 0;
+}
+
+
+.Stat-content {
+  border-radius: 30px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  min-height: 50px;
+  padding: 1rem 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.Stat-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #1e293b;
+}
+
+.Stat-content p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: #475569;
+}

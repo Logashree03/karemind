@@ -1,0 +1,1556 @@
+/* =========================================================
+   KMA PATIENT APP — DOCUMENTATION SCROLL
+   ========================================================= */
+
+.kma-scroll-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 680px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #07111f;
+  color: #ffffff;
+}
+
+.kma-background {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background:
+    radial-gradient(circle at 68% 50%, rgba(21, 112, 221, 0.14), transparent 32%),
+    radial-gradient(circle at 15% 80%, rgba(0, 184, 255, 0.06), transparent 28%),
+    linear-gradient(135deg, #07111f 0%, #091625 55%, #06101c 100%);
+}
+
+.kma-scroll-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+}
+
+.kma-intro,
+.kma-step-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kma-intro {
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kma-intro-inner {
+  width: min(1240px, calc(100% - 80px));
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+.kma-intro-copy {
+  max-width: 560px;
+  position: relative;
+  z-index: 10;
+}
+
+.kma-intro-eyebrow,
+.kma-step-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #61a9ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.kma-intro-eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: #61a9ff;
+}
+
+.kma-intro-copy h1 {
+  margin: 20px 0 24px;
+  font-size: clamp(3.2rem, 6vw, 6.5rem);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+
+.kma-intro-copy p {
+  max-width: 500px;
+  margin: 0;
+  color: rgba(232, 241, 252, 0.68);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.kma-open-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 42px;
+  color: rgba(255,255,255,0.52);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.kma-open-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #198cff;
+  box-shadow: 0 0 18px rgba(25, 140, 255, 0.8);
+}
+
+.kma-intro-visual {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(330px, 30vw);
+  will-change: transform, opacity;
+
+
+}
+
+.kma-image-shell {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 580px;
+
+  padding: 7px;
+
+  overflow: hidden;
+
+  background: #090b0f;
+
+  border: 2px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 34px;
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.55),
+    0 0 45px rgba(21, 112, 221, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(12px);
+  margin-top: 50px;
+}
+
+/* Dynamic island / speaker */
+.kma-image-shell::before {
+  content: "";
+  position: absolute;
+
+  top: 13px;
+  left: 50%;
+
+  width: 76px;
+  height: 20px;
+
+  transform: translateX(-50%);
+
+  border-radius: 20px;
+
+  background: #050608;
+
+  z-index: 10;
+  
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.05),
+    0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Home indicator */
+.kma-image-shell::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 9px;
+
+  width: 76px;
+  height: 4px;
+
+  transform: translateX(-50%);
+
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.75);
+
+  z-index: 10;
+}
+
+.kma-image-shell img {
+  display: block;
+
+  width: 100%;
+  height: 553px;
+
+
+  border-radius: 27px;
+
+  background: #fff;
+}
+
+.kma-step-layer {
+  z-index: 4;
+}
+
+.kma-step {
+  position: absolute;
+  inset: 0;
+  width: min(1240px, calc(100% - 80px));
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  align-items: center;
+  gap: 30px;
+  opacity: 0;
+  pointer-events: none;
+  perspective: 1200px;
+}
+
+.kma-step-copy {
+  position: relative;
+  z-index: 8;
+  max-width: 470px;
+  will-change: transform, opacity;
+}
+
+.kma-step-number {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 26px;
+  border: 1px solid rgba(97,169,255,0.4);
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(16, 53, 92, 0.38);
+  box-shadow: inset 0 0 25px rgba(21,112,221,0.12);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.kma-step-eyebrow {
+  margin-bottom: 17px;
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.kma-step h2 {
+  margin: 0 0 20px;
+  max-width: 520px;
+  font-size: clamp(2.4rem, 4.7vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.kma-step p {
+  max-width: 480px;
+  margin: 0;
+  color: rgba(232, 241, 252, 0.7);
+  font-size: 1rem;
+  line-height: 1.85;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.kma-step-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  color: rgba(255,255,255,0.52);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.kma-meta-line {
+  width: 32px;
+  height: 1px;
+  background: rgba(97,169,255,0.8);
+}
+
+.kma-step-visual {
+  position: absolute;
+  left: 70%;
+  top: 50%;
+  width: min(320px, 28vw);
+    justify-self: center;
+  align-self: center;
+  will-change: transform, opacity;
+}
+
+.kma-step-ring {
+  position: absolute;
+  inset: 8%;
+  z-index: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(28, 135, 255, 0.14),
+    rgba(28, 135, 255, 0.035) 50%,
+    transparent 70%
+  );
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+
+.kma-step-image {
+  position: relative;
+}
+
+.kma-progress {
+  position: absolute;
+  z-index: 30;
+  left: 50%;
+  bottom: 34px;
+  width: min(680px, calc(100% - 100px));
+  transform: translateX(-50%);
+}
+
+.kma-progress-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5px;
+  height: 1px;
+  background: rgba(255,255,255,0.13);
+}
+
+.kma-progress-fill {
+  width: 100%;
+  height: 100%;
+  background: #4b9cff;
+  box-shadow: 0 0 14px rgba(75,156,255,0.8);
+  transform-origin: left center;
+}
+
+.kma-progress-dots {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kma-progress-dots span {
+  width: 11px;
+  height: 11px;
+  border: 1px solid rgba(255,255,255,0.26);
+  border-radius: 50%;
+  background: #07111f;
+}
+
+.kma-progress-dots span.active {
+  border-color: #4b9cff;
+
+  background: #4b9cff;
+
+  box-shadow:
+    0 0 12px rgba(75,156,255,0.7);
+
+  transform: scale(1.15);
+}
+
+.kma-progress-dots span:first-child {
+  border-color: #4b9cff;
+  box-shadow: 0 0 12px rgba(75,156,255,0.5);
+}
+
+
+.kma-scroll-counter {
+  position: absolute;
+  z-index: 30;
+  right: 42px;
+  bottom: 29px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: rgba(255,255,255,0.35);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.kma-scroll-counter strong {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .kma-intro-inner,
+  .kma-step {
+    width: min(calc(100% - 40px), 760px);
+  }
+
+  .kma-intro-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .kma-intro-copy h1 {
+    font-size: clamp(2.8rem, 7vw, 4.8rem);
+  }
+
+  .kma-step {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 15px;
+  }
+
+  .kma-step h2 {
+    font-size: clamp(2rem, 6vw, 3.6rem);
+  }
+
+  .kma-step p {
+    font-size: 0.9rem;
+  }
+
+  .kma-step-visual,
+  .kma-intro-visual {
+    width: min(300px, 38vw);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  /* ---------------------------------------------------------
+     MOBILE HEADER SPACE
+     Change 80px if your navbar height is different
+     --------------------------------------------------------- */
+
+  .kma-scroll-section {
+    position: relative;
+
+    width: 100%;
+
+    height: calc(100dvh - 80px);
+    min-height: 600px;
+
+    margin-top: 80px;
+
+    overflow: hidden;
+  }
+
+
+  /* ---------------------------------------------------------
+     INTRO
+     --------------------------------------------------------- */
+
+  .kma-intro,
+  .kma-step-layer {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .kma-intro-inner {
+    width: calc(100% - 32px);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 0 55px;
+
+    box-sizing: border-box;
+  }
+
+
+  .kma-intro-copy {
+    width: 100%;
+    max-width: 430px;
+
+    text-align: center;
+  }
+
+
+  .kma-intro-eyebrow {
+    justify-content: center;
+
+    font-size: 8px;
+    letter-spacing: 0.17em;
+  }
+
+
+  .kma-intro-eyebrow::before {
+    width: 18px;
+  }
+
+
+  .kma-intro-copy h1 {
+    margin: 12px 0 14px;
+
+    font-size: clamp(2.3rem, 11vw, 3.5rem);
+
+    line-height: 0.96;
+    letter-spacing: -0.045em;
+  }
+
+
+  .kma-intro-copy p {
+    width: min(100%, 390px);
+
+    margin: 0 auto;
+
+    font-size: 0.78rem;
+    line-height: 1.65;
+  }
+
+
+  .kma-open-label {
+    justify-content: center;
+
+    margin-top: 18px;
+
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+
+
+  /* ---------------------------------------------------------
+     INTRO PHONE
+     --------------------------------------------------------- */
+
+  .kma-intro-visual {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 165px;
+    height: 310px;
+
+    margin: 0 auto;
+
+    transform: none;
+
+    flex: 0 0 auto;
+  }
+
+
+  /* =========================================================
+     STEP CONTAINER
+     ========================================================= */
+
+  .kma-step {
+    position: absolute;
+
+    inset: 0;
+
+    width: calc(100% - 28px);
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 28px 0 62px;
+
+    box-sizing: border-box;
+
+    perspective: none;
+  }
+
+
+  /* ---------------------------------------------------------
+     STEP TEXT
+     --------------------------------------------------------- */
+
+  .kma-step-copy {
+    width: 100%;
+    max-width: 430px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    order: 2;
+  }
+
+
+  /* ---------------------------------------------------------
+     NUMBER
+     --------------------------------------------------------- */
+
+  .kma-step-number {
+    width: 42px;
+    height: 42px;
+
+    margin: 0 auto 10px;
+
+    font-size: 10px;
+  }
+
+
+  /* ---------------------------------------------------------
+     EYEBROW
+     --------------------------------------------------------- */
+
+  .kma-step-eyebrow {
+    justify-content: center;
+
+    margin-bottom: 8px;
+
+    font-size: 7.5px;
+
+    line-height: 1.3;
+
+    letter-spacing: 0.13em;
+
+    white-space: nowrap;
+  }
+
+
+  /* ---------------------------------------------------------
+     TITLE
+     --------------------------------------------------------- */
+
+  .kma-step h2 {
+    width: 100%;
+    max-width: 420px;
+
+    margin: 0 auto 9px;
+
+    font-size: clamp(1.9rem, 9.5vw, 2.8rem);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+
+    text-align: center;
+  }
+
+
+  /* ---------------------------------------------------------
+     DESCRIPTION
+     --------------------------------------------------------- */
+
+  .kma-step p {
+    width: min(100%, 390px);
+
+    margin: 0 auto;
+
+    font-size: 0.76rem;
+
+    line-height: 1.65;
+
+    text-align: center;
+  }
+
+
+  /* ---------------------------------------------------------
+     META
+     --------------------------------------------------------- */
+
+  .kma-step-meta {
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 13px;
+
+    gap: 8px;
+
+    font-size: 7px;
+
+    line-height: 1.3;
+
+    letter-spacing: 0.1em;
+
+    text-align: center;
+  }
+
+
+  .kma-meta-line {
+    width: 23px;
+    flex: 0 0 23px;
+  }
+
+
+  /* =========================================================
+     PHONE VISUAL
+     ========================================================= */
+
+  .kma-step-visual {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 165px;
+    height: 310px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    order: 1;
+
+    flex: 0 0 auto;
+
+    transform: none;
+
+    will-change: transform, opacity;
+  }
+
+
+  /* ---------------------------------------------------------
+     PHONE GLOW
+     --------------------------------------------------------- */
+
+  .kma-step-ring {
+    position: absolute;
+
+    inset: -10%;
+
+    width: 120%;
+    height: 120%;
+
+    margin: auto;
+
+    z-index: 0;
+
+    border-radius: 50%;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(28, 135, 255, 0.13),
+        rgba(28, 135, 255, 0.045) 48%,
+        transparent 72%
+      );
+
+    filter: blur(4px);
+
+    transform: scale(0.95);
+
+    pointer-events: none;
+  }
+
+
+  /* ---------------------------------------------------------
+     PHONE BODY
+     --------------------------------------------------------- */
+
+  .kma-step-image,
+  .kma-image-shell {
+
+    position: relative;
+
+    width: 165px;
+    height: 310px;
+
+    padding: 5px;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    border-radius: 26px;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.17);
+
+    background:
+      linear-gradient(
+        145deg,
+        #151a20 0%,
+        #090c11 55%,
+        #05070a 100%
+      );
+
+    box-shadow:
+      0 22px 48px rgba(0, 0, 0, 0.52),
+      0 0 28px rgba(21, 112, 221, 0.10),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.045);
+
+    overflow: hidden;
+
+    isolation: isolate;
+  }
+
+
+  /* ---------------------------------------------------------
+     IMPORTANT — IMAGE MUST FOLLOW PHONE HEIGHT
+     --------------------------------------------------------- */
+
+  .kma-image-shell img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-height: none;
+
+    object-fit: cover;
+
+    border-radius: 21px;
+
+    background: #ffffff;
+  }
+
+
+  /* ---------------------------------------------------------
+     DYNAMIC ISLAND
+     --------------------------------------------------------- */
+
+  .kma-image-shell::before {
+
+    top: 8px;
+
+    width: 56px;
+    height: 14px;
+
+    border-radius: 20px;
+
+    z-index: 10;
+  }
+
+
+  /* ---------------------------------------------------------
+     HOME INDICATOR
+     --------------------------------------------------------- */
+
+  .kma-image-shell::after {
+
+    bottom: 7px;
+
+    width: 52px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    z-index: 10;
+  }
+
+
+  /* =========================================================
+     PROGRESS
+     ========================================================= */
+
+  .kma-progress {
+
+    left: 50%;
+
+    bottom: 23px;
+
+    width: calc(100% - 70px);
+
+    max-width: 420px;
+
+    transform: translateX(-50%);
+  }
+
+
+  .kma-progress-track {
+    top: 3px;
+  }
+
+
+  .kma-progress-dots span {
+
+    width: 7px;
+    height: 7px;
+  }
+
+
+  /* =========================================================
+     SCROLL COUNTER
+     ========================================================= */
+
+  .kma-scroll-counter {
+
+    right: 12px;
+
+    bottom: 17px;
+
+    gap: 5px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.11em;
+  }
+
+
+  .kma-scroll-counter strong {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   MOBILE — CLEAN & RESPONSIVE KMA STEP DESIGN
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  /* ---------- SECTION ---------- */
+
+  .kma-scroll-section {
+    width: 100%;
+    height: 100dvh;
+    min-height: 680px;
+    overflow: hidden;
+  }
+
+
+  /* ---------- INTRO ---------- */
+
+  .kma-intro-inner {
+    width: calc(100% - 36px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 45px 0 70px;
+    box-sizing: border-box;
+  }
+
+  .kma-intro-copy {
+    width: 100%;
+    max-width: 520px;
+    text-align: center;
+  }
+
+  .kma-intro-eyebrow {
+    justify-content: center;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+  }
+
+  .kma-intro-eyebrow::before {
+    width: 18px;
+  }
+
+  .kma-intro-copy h1 {
+    margin: 14px 0 16px;
+    font-size: clamp(2.5rem, 12vw, 3.8rem);
+    line-height: 0.96;
+    letter-spacing: -0.045em;
+  }
+
+  .kma-intro-copy p {
+    width: min(100%, 390px);
+    margin: 0 auto;
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  .kma-open-label {
+    justify-content: center;
+    margin-top: 22px;
+    font-size: 9px;
+    letter-spacing: 0.13em;
+  }
+
+
+  /* ---------- INTRO PHONE ---------- */
+
+  .kma-intro-visual {
+    position: relative;
+    left: -25%;
+    top: auto;
+
+    width: 175px;
+    height: 340px;
+
+    margin: 4px auto 0;
+
+    transform: none;
+    flex: 0 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    will-change: transform, opacity;
+  }
+
+
+  /* =========================================================
+     STEP
+     ========================================================= */
+
+  .kma-step {
+    position: absolute;
+    inset: 0;
+
+    width: calc(100% - 32px);
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 38px 0 72px;
+
+    box-sizing: border-box;
+
+    perspective: none;
+  }
+
+
+  /* ---------- STEP CONTENT ---------- */
+
+  .kma-step-copy {
+    width: 100%;
+    max-width: 480px;
+
+    text-align: center;
+
+    order: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  /* ---------- NUMBER ---------- */
+
+  .kma-step-number {
+    width: 44px;
+    height: 44px;
+
+    margin: 0 auto 13px;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+    letter-spacing: 0.08em;
+
+    border: 1px solid rgba(97, 169, 255, 0.42);
+
+    background:
+      radial-gradient(
+        circle at 35% 30%,
+        rgba(97, 169, 255, 0.16),
+        rgba(16, 53, 92, 0.35)
+      );
+
+    box-shadow:
+      inset 0 0 18px rgba(21, 112, 221, 0.12),
+      0 0 20px rgba(21, 112, 221, 0.06);
+  }
+
+
+  /* ---------- EYEBROW ---------- */
+
+  .kma-step-eyebrow {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 9px;
+
+    font-size: 8px;
+    line-height: 1.3;
+
+    letter-spacing: 0.15em;
+  }
+
+
+  /* ---------- TITLE ---------- */
+
+  .kma-step h2 {
+    width: 100%;
+    max-width: 420px;
+
+    margin: 0 auto 11px;
+
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+
+    text-align: center;
+  }
+
+
+  /* ---------- DESCRIPTION ---------- */
+
+  .kma-step p {
+    width: min(100%, 410px);
+
+    margin: 0 auto;
+
+    font-size: 0.8rem;
+    line-height: 1.7;
+
+    color: rgba(232, 241, 252, 0.68);
+
+    text-align: center;
+  }
+
+
+  /* ---------- META ---------- */
+
+  .kma-step-meta {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 16px;
+
+    font-size: 8px;
+    line-height: 1.3;
+
+    letter-spacing: 0.11em;
+
+    text-align: center;
+  }
+
+  .kma-meta-line {
+    width: 24px;
+    flex: 0 0 24px;
+  }
+
+
+  /* =========================================================
+     PHONE VISUAL
+     ========================================================= */
+
+  .kma-step-visual {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 175px;
+    height: 330px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    order: 1;
+
+    flex: 0 0 auto;
+
+    transform: none;
+
+    will-change: transform, opacity;
+  }
+
+
+  /* ---------- GLOW ---------- */
+
+  .kma-step-ring {
+    position: absolute;
+
+    inset: -10%;
+
+    z-index: 0;
+
+    width: 120%;
+    height: 120%;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(28, 135, 255, 0.13) 0%,
+        rgba(28, 135, 255, 0.055) 42%,
+        transparent 72%
+      );
+
+    filter: blur(4px);
+
+    transform: scale(0.95);
+
+    pointer-events: none;
+  }
+
+
+  /* ---------- PHONE BODY ---------- */
+
+  .kma-step-image,
+  .kma-image-shell {
+    position: relative;
+
+    width: 175px;
+    height: 330px;
+
+    padding: 5px;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    border-radius: 27px;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.17);
+
+    background:
+      linear-gradient(
+        145deg,
+        #12161c 0%,
+        #080b10 55%,
+        #05070a 100%
+      );
+
+    box-shadow:
+      0 25px 55px rgba(0, 0, 0, 0.52),
+      0 0 30px rgba(21, 112, 221, 0.11),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.045);
+
+    overflow: hidden;
+
+    isolation: isolate;
+    top: 59%;
+    left: 50%;
+  }
+
+
+  /* ---------- PHONE IMAGE ---------- */
+
+  .kma-image-shell img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-height: none;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+  }
+
+
+  /* ---------- DYNAMIC ISLAND ---------- */
+
+  .kma-image-shell::before {
+    top: 9px;
+
+    width: 58px;
+    height: 15px;
+
+    border-radius: 20px;
+
+    z-index: 10;
+  }
+
+
+  /* ---------- HOME INDICATOR ---------- */
+
+  .kma-image-shell::after {
+    bottom: 7px;
+
+    width: 56px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    z-index: 10;
+  }
+
+
+  /* =========================================================
+     PROGRESS
+     ========================================================= */
+
+  .kma-progress {
+    left: 50%;
+    bottom: 25px;
+
+    width: calc(100% - 70px);
+
+    max-width: 430px;
+
+    transform: translateX(-50%);
+  }
+
+  .kma-progress-track {
+    top: 3px;
+  }
+
+  .kma-progress-dots span {
+    width: 7px;
+    height: 7px;
+  }
+
+
+  /* ---------- COUNTER ---------- */
+
+  .kma-scroll-counter {
+    right: 14px;
+    bottom: 18px;
+
+    gap: 6px;
+
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+
+  .kma-scroll-counter strong {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .kma-scroll-section {
+    min-height: 620px;
+  }
+
+
+  /* INTRO */
+
+  .kma-intro-inner {
+    width: calc(100% - 28px);
+    gap: 20px;
+    padding: 38px 0 65px;
+  }
+
+  .kma-intro-copy h1 {
+    font-size: clamp(2.25rem, 12vw, 3.2rem);
+  }
+
+  .kma-intro-copy p {
+    font-size: 0.78rem;
+    line-height: 1.65;
+  }
+
+
+  /* STEP */
+
+  .kma-step {
+    width: calc(100% - 28px);
+    gap: 16px;
+    padding: 30px 0 65px;
+  }
+
+
+  /* PHONE */
+
+  .kma-step-visual {
+    width: 155px;
+    height: 295px;
+  }
+
+  .kma-step-image,
+  .kma-image-shell {
+    width: 155px;
+    height: 295px;
+
+    padding: 5px;
+
+    border-radius: 25px;
+  }
+
+  .kma-image-shell img {
+    border-radius: 20px;
+  }
+
+  .kma-image-shell::before {
+    top: 8px;
+
+    width: 52px;
+    height: 14px;
+  }
+
+  .kma-image-shell::after {
+    bottom: 7px;
+
+    width: 50px;
+    height: 3px;
+  }
+
+
+  /* NUMBER */
+
+  .kma-step-number {
+    width: 40px;
+    height: 40px;
+
+    margin-bottom: 10px;
+
+    font-size: 9px;
+  }
+
+
+  /* TEXT */
+
+  .kma-step-eyebrow {
+    font-size: 7px;
+    letter-spacing: 0.12em;
+  }
+
+  .kma-step h2 {
+    margin-bottom: 9px;
+
+    font-size: clamp(1.8rem, 9.5vw, 2.5rem);
+  }
+
+  .kma-step p {
+    max-width: 350px;
+
+    font-size: 0.76rem;
+    line-height: 1.65;
+  }
+
+  .kma-step-meta {
+    margin-top: 13px;
+    font-size: 7px;
+  }
+
+
+  /* PROGRESS */
+
+  .kma-progress {
+    bottom: 22px;
+    width: calc(100% - 60px);
+  }
+
+  .kma-progress-dots span {
+    width: 6px;
+    height: 6px;
+  }
+
+  .kma-scroll-counter {
+    right: 11px;
+    bottom: 16px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .kma-step {
+    gap: 13px;
+    padding-top: 25px;
+  }
+
+  .kma-step-visual {
+    width: 140px;
+    height: 268px;
+  }
+
+  .kma-step-image,
+  .kma-image-shell {
+    width: 140px;
+    height: 268px;
+
+    border-radius: 23px;
+  }
+
+  .kma-image-shell img {
+    border-radius: 18px;
+  }
+
+  .kma-step h2 {
+    font-size: 1.75rem;
+  }
+
+  .kma-step p {
+    font-size: 0.72rem;
+    line-height: 1.6;
+  }
+
+  .kma-step-meta {
+    margin-top: 10px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .kma-scroll-section *,
+  .kma-scroll-section *::before,
+  .kma-scroll-section *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

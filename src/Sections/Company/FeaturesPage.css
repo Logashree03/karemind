@@ -1,0 +1,712 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.features-page {
+  width: 100%;
+  min-height: 100vh;
+  color: #202020;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.features-layout {
+  width: min(1400px, 90%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 270px minmax(0, 1fr);
+
+  gap: 55px;
+
+  padding: 55px 0 80px;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.features-sidebar {
+  position: sticky;
+
+  top: 30px;
+
+  align-self: start;
+
+  padding: 26px 18px;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.48);
+    backdrop-filter: blur(18px) saturate(135%);
+    -webkit-backdrop-filter: blur(18px) saturate(135%);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.85), inset 0 -1px 1px rgba(255, 255, 255, 0.18), 0 8px 25px rgba(67, 48, 100, 0.10);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+    border-radius: 15px;
+}
+
+.features-sidebar h2 {
+  margin: 0;
+
+  padding-left: 8px;
+
+  font-size: 31px;
+  font-weight: 700;
+
+  color: #315fb5;
+}
+
+.sidebar-line {
+  width: 42px;
+  height: 3px;
+
+  margin: 12px 0 20px 8px;
+  background: #315fb5;
+
+
+}
+
+
+/* =========================================
+   SIDEBAR MENU
+========================================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.sidebar-item {
+  width: 100%;
+
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 10px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #222222;
+
+
+  font-size: 13px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.sidebar-item:hover {
+  background: linear-gradient(145deg, rgba(30, 52, 82, 0.96), rgba(13, 31, 57, 0.98)); 
+  color: #faf3ff;
+}
+
+.sidebar-item:hover span {
+  color: #faf3ff;
+}
+
+.sidebar-item.active {
+  background: linear-gradient(145deg, rgba(30, 52, 82, 0.96), rgba(13, 31, 57, 0.98));  
+
+  font-weight: 600;
+}
+
+.sidebar-item.active span
+{
+  color: #faf3ff;
+
+  font-weight: 600;
+}
+
+
+.sidebar-number {
+  min-width: 22px;
+
+  font-size: 11px;
+
+  color: #b8b8b8;
+}
+
+.sidebar-item.active .sidebar-number {
+  color: #315fb5;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.features-content {
+  min-width: 0;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.section-intro {
+  margin-bottom: 38px;
+}
+
+.section-label {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  color: #315fb5;
+}
+
+.section-intro h1 {
+  margin: 0 0 30px;
+
+  font-size: clamp(34px, 4vw, 48px);
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+
+  line-height: 1.1;
+
+  color: #315fb5;
+}
+
+.section-intro p {
+  max-width: 900px;
+
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+
+  color: #222222;
+}
+
+
+/* =========================================
+   FEATURE LIST
+========================================= */
+
+.feature-list {
+  width: 100%;
+
+  border-top: 1px solid #e4e4e4;
+
+  background: rgba(255, 255, 255, 0.48);
+    backdrop-filter: blur(18px) saturate(135%);
+    -webkit-backdrop-filter: blur(18px) saturate(135%);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.85), inset 0 -1px 1px rgba(255, 255, 255, 0.18), 0 8px 25px rgba(67, 48, 100, 0.10);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+    border-radius: 15px;
+}
+
+
+/* =========================================
+   FEATURE ROW
+========================================= */
+
+.feature-row {
+  border-bottom: 1px solid #d7d6d6;
+
+
+}
+
+
+/* =========================================
+   MAIN FEATURE BUTTON
+========================================= */
+
+.feature-main {
+  width: 100%;
+
+  min-height: 112px;
+
+  display: grid;
+
+  grid-template-columns: 60px minmax(0, 1fr) 52px;
+
+  align-items: center;
+
+  padding: 34px 20px;
+
+  border: none;
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+/* Number */
+
+.feature-number {
+  align-self: flex-start;
+
+  padding-top: 3px;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #cfcfcf;
+}
+
+
+/* =========================================
+   FEATURE TEXT
+========================================= */
+
+.feature-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  padding-right: 35px;
+}
+
+.feature-title {
+  font-size: 19px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  color: #202020;
+}
+
+.feature-description {
+  max-width: 620px;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  color: #999999;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.feature-arrow {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #181818;
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* First / active row */
+
+.feature-row:first-child .feature-arrow {
+  background: #4f82bd;
+}
+
+
+/* Hover */
+
+.feature-main:hover .feature-arrow {
+  transform: scale(1.06);
+}
+
+
+/* =========================================
+   OPEN STATE
+========================================= */
+
+.feature-row.open {
+  background: #fcf8ff;
+}
+
+.feature-row.open .feature-arrow {
+  transform: rotate(45deg);
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.feature-details {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  transition:
+    grid-template-rows 0.3s ease,
+    opacity 0.3s ease;
+
+  opacity: 0;
+}
+
+.feature-details.visible {
+  grid-template-rows: 1fr;
+
+  opacity: 1;
+}
+
+.feature-details-inner {
+  min-height: 0;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 0 60px 25px;
+}
+
+.feature-details-inner p {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #777777;
+}
+
+.detail-dot {
+  flex-shrink: 0;
+
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #315fb5;
+
+  color: #ffffff;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   NEXT SECTION
+========================================= */
+
+.next-section {
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: 35px;
+}
+
+.next-section button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.next-section button > span:first-child {
+  font-size: 13px;
+
+  color: #888888;
+}
+
+.next-section strong {
+  font-size: 14px;
+
+  color: #315fb5;
+}
+
+.next-arrow {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 8px;
+
+  border-radius: 50%;
+
+  background: #315fb5;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+.end-message {
+  font-size: 14px;
+
+  color: #999999;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .features-layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+
+    gap: 30px;
+  }
+
+  .features-navbar {
+    padding: 0 4%;
+  }
+
+  .features-navbar nav {
+    gap: 20px;
+  }
+
+  .feature-main {
+    grid-template-columns: 45px minmax(0, 1fr) 48px;
+  }
+
+  .feature-title {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+  .features-navbar {
+    height: auto;
+
+    padding: 18px 5%;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .features-navbar nav {
+    width: 100%;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    overflow-x: auto;
+  }
+
+  .features-navbar nav a {
+    white-space: nowrap;
+
+    font-size: 12px;
+  }
+
+
+  .features-layout {
+    width: 90%;
+
+    display: block;
+
+    padding-top: 30px;
+  }
+
+
+  /* Sidebar becomes horizontal */
+
+  .features-sidebar {
+    position: relative;
+
+    top: auto;
+
+    margin-bottom: 35px;
+
+    padding: 20px;
+  }
+
+  .features-sidebar h2 {
+    font-size: 27px;
+  }
+
+  .sidebar-menu {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 4px;
+  }
+
+  .sidebar-item {
+    min-height: 42px;
+
+    font-size: 12px;
+  }
+
+
+  .section-intro h1 {
+    font-size: 34px;
+  }
+
+
+  .feature-main {
+    min-height: 100px;
+
+    grid-template-columns: 38px minmax(0, 1fr) 42px;
+
+    padding: 22px 0;
+  }
+
+  .feature-number {
+    font-size: 17px;
+  }
+
+  .feature-text {
+    padding-right: 15px;
+  }
+
+  .feature-title {
+    font-size: 15px;
+  }
+
+  .feature-description {
+    font-size: 12px;
+  }
+
+  .feature-arrow {
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+  }
+
+  .feature-details-inner {
+    padding: 0 38px 22px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .features-layout {
+    width: 92%;
+  }
+
+  .sidebar-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .section-intro h1 {
+    font-size: 29px;
+  }
+
+  .section-intro p {
+    font-size: 13px;
+  }
+
+  .feature-main {
+    grid-template-columns: 32px minmax(0, 1fr) 38px;
+  }
+
+  .feature-number {
+    font-size: 15px;
+  }
+
+  .feature-title {
+    font-size: 14px;
+  }
+
+  .feature-description {
+    font-size: 11.5px;
+  }
+
+  .feature-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .feature-details-inner {
+    padding-left: 32px;
+  }
+
+}
